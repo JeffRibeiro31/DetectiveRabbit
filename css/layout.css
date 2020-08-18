@@ -1,0 +1,274 @@
+
+body {
+    height:100%; 
+    display: inline-block;
+    
+    background-color: rgb(252, 251, 245);
+    background-size: cover;
+    margin:0;
+ }
+
+
+.table {
+    margin-left: 15px;
+    border: solid black 1px;
+    border-collapse: collapse;
+    width: 1200px;
+}
+
+
+.table-content{
+    border: solid rgb(221, 221, 221) 1px;
+    border-collapse: collapse;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    font-size: 9px;
+   
+
+}
+
+
+
+
+td:hover{
+    background-color: blue;
+    color: white;
+}
+
+
+.active{
+    background: rgb(13, 10, 192);
+    color: black;
+}
+
+
+
+
+
+.vigilant{
+
+    background: red;
+
+}
+
+
+button{
+    background: blue;
+    color: white;
+    height: 23px;
+    border: none;
+}
+
+.game-table{
+    margin-top: 2px;
+    z-index: 0;
+}
+
+
+.vision {
+    background: yellow;
+
+}
+
+.wasted{
+
+    background-color: black;
+}
+
+
+
+.floor{
+    
+    background-image: url("../img/scenarios/SolidFloor-1.png"); /* The image used */
+    background-color: #000000; /* Used if the image is unavailable */
+    /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    border: none;
+    border-collapse: collapse;
+    width: 35px;
+    height: 35px;
+
+
+
+}
+
+
+
+[light = "light-sim"] {
+    
+    background-image: url("../img/scenarios/Light-floor.png"); /* The image used */
+    background-color: #000000; /* Used if the image is unavailable */
+    /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    border: none;
+    border-collapse: collapse;
+    width: 35px;
+    height: 35px;
+}
+
+
+
+.borda {
+    background-image: url('../img/scenarios/Hole.png');
+    border: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#security1,#security2,#security3 {
+    width: 115px;
+}
+
+
+
+#next {
+    width: 60px;
+
+}
+
+
+
+
+[guarda = "guarda-sim"] {
+
+    background-color: yellow;
+}
+
+
+[guarda2 = "guarda-sim"] {
+
+    background-color: yellow;
+}
+
+
+[guarda3 = "guarda-sim"] {
+
+    background-color: yellow;
+}
+
+
+[guardavision = "guardavision-yes"] {
+
+    background-color: red;
+}
+
+
+
+
+
+[presenca = "presenca-sim"] {
+
+    background-color: blue;
+}
+
+
+[wall = "active"] {
+
+    background-image: url("../img/scenarios/Wall-1.png");
+    width: 35px;
+    height: 35px;
+
+
+}
+
+[walld = "active"] {
+
+    background-color: violet;
+
+
+}
+
+[wallup = "active"] {
+
+    background-color: rgb(125, 219, 113);
+
+
+}
+
+
+[wallr = "active"] {
+
+    background-color: rgb(113, 155, 219);
+
+
+}
+
+[walll = "active"] {
+
+    background-color: rgb(255, 245, 153);
+
+
+}
+
+
+
+.layout{
+    z-index: 1;
+
+    
+
+}
+
+
+
+
+
+
+
+
+.rabbit{
+    
+    width: 60px;
+    height: 100px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+#rabbitimg{
+
+    width: 105px;
+   
+  
+
+
+}
+
+
+
+
+
+
+
+
+
+.menu-principal{
+    display: inline-block;
+
+}
+
+
+
+
+
+
