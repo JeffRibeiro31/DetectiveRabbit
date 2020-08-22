@@ -526,7 +526,7 @@ function gameOver() {
         for (j=0; j < rabbitactual.length; j++){
             if(rabbitactual[j].id === guarda[i].id){
                // alert("Pego!");
-                if(!alert("Pego! Você entrou no raio de visão do segurança... Tente novamente!")) document.location = "./tentarNovamente.html";
+                if(!alert("Pego! Você entrou no raio de visão do segurança... Tente novamente!")) document.location = "./home.html";
                 break;
             }
         }
@@ -537,7 +537,7 @@ function gameOver() {
         for (j=0; j < rabbitactual.length; j++){
             if(rabbitactual[j].id === guardapos[i].id){
                // alert("Pego!");
-                if(!alert("Pego! Você passou muito perto do segurança... Tente novamente!")) document.location = "./tentarNovamente.html";
+                if(!alert("Pego! Você passou muito perto do segurança... Tente novamente!")) document.location = "./home.html";
                 break;
             }
         }
