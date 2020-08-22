@@ -1,0 +1,66 @@
+*{
+    margin:0;
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+
+
+button{
+
+    background-image: linear-gradient(to bottom, rgb(57, 57, 214), rgb(42, 42, 202));
+    color: rgb(164, 255, 16);
+    font-size: 22px;
+    margin-left: 20px;
+    border: none;
+    height: 30px;
+    text-align: center;
+    font-weight: 6  00;
+    
+}
+
+
+.buttons {
+
+margin-left: 200px;
+margin-top: -10px;
+
+
+
+}
+
+
+
+
+.GameTitle {
+    font-size: 50px;
+    margin-left: 320px;
+    font-weight: 700;
+    margin-top: 20px;
+    
+}
+
+
+
+button:hover {
+
+    background: yellow;
+    color: black;
+    border: black solid 2px;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: black;
+
+}
+
+
+
+

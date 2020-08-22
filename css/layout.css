@@ -6,6 +6,7 @@ body {
     background-color: rgb(252, 251, 245);
     background-size: cover;
     margin:0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  }
 
 
@@ -55,10 +56,16 @@ td:hover{
 
 
 button{
-    background: blue;
-    color: white;
+    background: rgb(0, 0, 170);
+    color: rgb(241, 255, 44);
     height: 23px;
     border: none;
+}
+
+button:hover{
+    background: rgb(15, 15, 73);
+    color: rgb(241, 255, 44);
+
 }
 
 .game-table{
@@ -147,7 +154,19 @@ button{
 }
 
 
+.cronometro {
+    color:white;
+    background: rgb(6, 6, 165);
+    border: solid 2px yellow;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    
 
+}
 
 [guarda = "guarda-sim"] {
 

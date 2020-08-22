@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/conf.js"></script>
-    <script src="./js/stage1-1/pigControl.js"></script>
-    <script src="./js/stage1-1/pigControl2.js"></script>
-    <script src="./js/stage1-1/pigControl3.js"></script>
+    <script src="./js/stage1-2/pigControl.js"></script>
+    <script src="./js/stage1-2/pigControl2.js"></script>
+    <script src="./js/stage1-2/pigControl3.js"></script>
     <link rel="stylesheet" href="./css/layout.css">
     <title>GamePage</title>
 </head>
@@ -17,10 +17,15 @@
     <section class="title-page">
         <nav class="menu-principal">
         
-        <button onclick="window.location.href = './home.html'">Página Inicial</button>
+        <button onclick="window.location.href = window.location.href">Atualizar página</button>
+        <button onclick="pigStart()"> PigTest</button>
         <button onclick="modoConstrutor()">Modo Construtor</button>
         <button onclick="modoGame()">Modo Jogo</button>
-        <button onclick="desTrataWall()">Modo s/ Parede</button>
+        <button onclick="trataWall()">Testa Função</button>
+        <button onclick="pigStart2()">Testa Função2</button>
+        <button onclick="PigPosition3()">Testa pos3</button>
+        <button onclick="gameOver()">GameOver</button>
+        
     </nav>
     </section>
 
@@ -79,14 +84,14 @@
             <td class="table-content floor" id="2-2"></td>
             <td class="table-content floor" id="2-3"></td>
             <td class="table-content floor" id="2-4" ></td>
-            <td class="table-content floor" id="2-5" wall="active"></td>
-            <td class="table-content floor" id="2-6" wall="active" ></td>
+            <td class="table-content floor" id="2-5"></td>
+            <td class="table-content floor" id="2-6" ></td>
             <td class="table-content floor" id="2-7"></td>
             <td class="table-content floor" id="2-8"></td>
             <td class="table-content floor" id="2-9"></td>
             <td class="table-content floor" id="2-10"></td>
-            <td class="table-content floor" id="2-11"></td>
-            <td class="table-content floor" id="2-12"></td>
+            <td class="table-content floor" id="2-11" wall="active"></td>
+            <td class="table-content floor" id="2-12" wall="active"></td>
             <td class="table-content floor" id="2-13"></td>
             <td class="table-content floor" id="2-14"></td>
             <td class="table-content floor" id="2-15"></td>
@@ -101,8 +106,8 @@
             <td class="table-content floor" id="2-24"></td>
             <td class="table-content floor" id="2-25"></td>
             <td class="table-content floor" id="2-26"></td>
-            <td class="table-content floor" id="2-27"></td>
-            <td class="table-content floor" id="2-28"></td>
+            <td class="table-content floor" id="2-27" wall="active"></td>
+            <td class="table-content floor" id="2-28" wall="active"></td>
             <td class="table-content floor" id="2-29"></td>
             <td class="table-content floor" id="2-30"></td>
             <td class="table-content floor" id="2-31"></td>
@@ -116,14 +121,14 @@
             <td class="table-content floor" id="3-2"></td>
             <td class="table-content floor" id="3-3"></td>
             <td class="table-content floor" id="3-4" ></td>
-            <td class="table-content floor" id="3-5"  wall="active"></td>
-            <td class="table-content floor" id="3-6" wall="active" ></td>
+            <td class="table-content floor" id="3-5" ></td>
+            <td class="table-content floor" id="3-6" ></td>
             <td class="table-content floor" id="3-7"></td>
             <td class="table-content floor" id="3-8"></td>
             <td class="table-content floor" id="3-9"></td>
             <td class="table-content floor" id="3-10"></td>
-            <td class="table-content floor" id="3-11"></td>
-            <td class="table-content floor" id="3-12"></td>
+            <td class="table-content floor" id="3-11" wall="active"></td>
+            <td class="table-content floor" id="3-12" wall="active"></td>
             <td class="table-content floor" id="3-13"></td>
             <td class="table-content floor" id="3-14"></td>
             <td class="table-content floor" id="3-15"></td>
@@ -138,8 +143,8 @@
             <td class="table-content floor" id="3-24"></td>
             <td class="table-content floor" id="3-25"></td>
             <td class="table-content floor" id="3-26"></td>
-            <td class="table-content floor" id="3-27"></td>
-            <td class="table-content floor" id="3-28"></td>
+            <td class="table-content floor" id="3-27" wall="active"></td>
+            <td class="table-content floor" id="3-28" wall="active"></td>
             <td class="table-content floor" id="3-29"></td>
             <td class="table-content floor" id="3-30"></td>
             <td class="table-content floor" id="3-31"></td>
@@ -149,35 +154,35 @@
         </tr>
         <tr>
           
-			<td class="table-content floor" id="4-1"></td>
-            <td class="table-content floor" id="4-2"></td>
-            <td class="table-content floor" id="4-3"></td>
+			<td class="table-content floor" id="4-1" wall="active"></td>
+            <td class="table-content floor" id="4-2" wall="active"></td>
+            <td class="table-content floor" id="4-3" wall="active"></td>
             <td class="table-content floor" id="4-4" ></td>
-            <td class="table-content floor" id="4-5" wall="active"></td>
-            <td class="table-content floor" id="4-6" wall="active" ></td>
+            <td class="table-content floor" id="4-5"></td>
+            <td class="table-content floor" id="4-6" ></td>
             <td class="table-content floor" id="4-7"></td>
             <td class="table-content floor" id="4-8"></td>
             <td class="table-content floor" id="4-9"></td>
             <td class="table-content floor" id="4-10"></td>
-            <td class="table-content floor" id="4-11"></td>
-            <td class="table-content floor" id="4-12"></td>
+            <td class="table-content floor" id="4-11" wall="active"></td>
+            <td class="table-content floor" id="4-12" wall="active"></td>
             <td class="table-content floor" id="4-13" ></td>
-            <td class="table-content floor" id="4-14" wall="active"></td>
-            <td class="table-content floor" id="4-15" wall="active"></td>
-            <td class="table-content floor" id="4-16" wall="active"></td>
-            <td class="table-content floor" id="4-17" wall="active"></td>
-            <td class="table-content floor" id="4-18" wall="active"></td>
+            <td class="table-content floor" id="4-14"></td>
+            <td class="table-content floor" id="4-15"></td>
+            <td class="table-content floor" id="4-16"></td>
+            <td class="table-content floor" id="4-17"></td>
+            <td class="table-content floor" id="4-18"></td>
             <td class="table-content floor" id="4-19" wall="active"></td>
             <td class="table-content floor" id="4-20" wall="active"></td>
-            <td class="table-content floor" id="4-21" wall="active"></td>
-            <td class="table-content floor" id="4-22" wall="active"></td>
-            <td class="table-content floor" id="4-23" wall="active"></td>
-            <td class="table-content floor" id="4-24" wall="active"></td>
-            <td class="table-content floor" id="4-25" wall="active"></td>
-            <td class="table-content floor" id="4-26" wall="active"></td>
+            <td class="table-content floor" id="4-21"></td>
+            <td class="table-content floor" id="4-22"></td>
+            <td class="table-content floor" id="4-23"></td>
+            <td class="table-content floor" id="4-24"></td>
+            <td class="table-content floor" id="4-25"></td>
+            <td class="table-content floor" id="4-26"></td>
             <td class="table-content floor" id="4-27" wall="active"></td>
             <td class="table-content floor" id="4-28" wall="active"></td>
-            <td class="table-content floor" id="4-29" wall="active"></td>
+            <td class="table-content floor" id="4-29"></td>
             <td class="table-content floor" id="4-30"></td>
             <td class="table-content floor" id="4-31"></td>
             <td class="table-content floor" id="4-32"></td>
@@ -186,35 +191,35 @@
         </tr>
         <tr>
             
-			<td class="table-content floor" id="5-1" ></td>
-            <td class="table-content floor" id="5-2"></td>
-            <td class="table-content floor" id="5-3"></td>
+			<td class="table-content floor" id="5-1" wall="active"></td>
+            <td class="table-content floor" id="5-2" wall="active"></td>
+            <td class="table-content floor" id="5-3" wall="active"></td>
             <td class="table-content floor" id="5-4" ></td>
-            <td class="table-content floor" id="5-5"  wall="active"></td>
-            <td class="table-content floor" id="5-6"  wall="active"></td>
+            <td class="table-content floor" id="5-5" ></td>
+            <td class="table-content floor" id="5-6" ></td>
             <td class="table-content floor" id="5-7"></td>
             <td class="table-content floor" id="5-8"></td>
             <td class="table-content floor" id="5-9"></td>
             <td class="table-content floor" id="5-10"></td>
-            <td class="table-content floor" id="5-11"></td>
-            <td class="table-content floor" id="5-12"></td>
+            <td class="table-content floor" id="5-11" wall="active"></td>
+            <td class="table-content floor" id="5-12" wall="active"></td>
             <td class="table-content floor" id="5-13" ></td>
-            <td class="table-content floor" id="5-14" wall="active"></td>
-            <td class="table-content floor" id="5-15" wall="active"></td>
-            <td class="table-content floor" id="5-16" wall="active"></td>
-            <td class="table-content floor" id="5-17" wall="active"></td>
-            <td class="table-content floor" id="5-18" wall="active"></td>
+            <td class="table-content floor" id="5-14"></td>
+            <td class="table-content floor" id="5-15"></td>
+            <td class="table-content floor" id="5-16"></td>
+            <td class="table-content floor" id="5-17"></td>
+            <td class="table-content floor" id="5-18"></td>
             <td class="table-content floor" id="5-19" wall="active"></td>
             <td class="table-content floor" id="5-20" wall="active"></td>
-            <td class="table-content floor" id="5-21" wall="active"></td>
-            <td class="table-content floor" id="5-22" wall="active"></td>
-            <td class="table-content floor" id="5-23" wall="active"></td>
-            <td class="table-content floor" id="5-24" wall="active"></td>
-            <td class="table-content floor" id="5-25" wall="active"></td>
-            <td class="table-content floor" id="5-26" wall="active"></td>
+            <td class="table-content floor" id="5-21"></td>
+            <td class="table-content floor" id="5-22"></td>
+            <td class="table-content floor" id="5-23"></td>
+            <td class="table-content floor" id="5-24"></td>
+            <td class="table-content floor" id="5-25"></td>
+            <td class="table-content floor" id="5-26"></td>
             <td class="table-content floor" id="5-27" wall="active"></td>
             <td class="table-content floor" id="5-28" wall="active"></td>
-            <td class="table-content floor" id="5-29" wall="active"></td>
+            <td class="table-content floor" id="5-29"></td>
             <td class="table-content floor" id="5-30"></td>
             <td class="table-content floor" id="5-31"></td>
             <td class="table-content floor" id="5-32"></td>
@@ -223,34 +228,34 @@
         </tr>
         <tr>
             
-			<td class="table-content floor" id="6-1"></td>
-            <td class="table-content floor" id="6-2"></td>
-            <td class="table-content floor" id="6-3"></td>
+			<td class="table-content floor" id="6-1" wall="active"></td>
+            <td class="table-content floor" id="6-2" wall="active"></td>
+            <td class="table-content floor" id="6-3" wall="active"></td>
             <td class="table-content floor" id="6-4"></td>
-            <td class="table-content floor" id="6-5" wall="active"></td>
-            <td class="table-content floor" id="6-6" wall="active"></td>
+            <td class="table-content floor" id="6-5"></td>
+            <td class="table-content floor" id="6-6"></td>
             <td class="table-content floor" id="6-7"></td>
             <td class="table-content floor" id="6-8"></td>
             <td class="table-content floor" id="6-9"></td>
             <td class="table-content floor" id="6-10"></td>
-            <td class="table-content floor" id="6-11"></td>
-            <td class="table-content floor" id="6-12"></td>
+            <td class="table-content floor" id="6-11" wall="active"></td>
+            <td class="table-content floor" id="6-12" wall="active"></td>
             <td class="table-content floor" id="6-13" ></td>
-            <td class="table-content floor" id="6-14" wall="active" ></td>
-            <td class="table-content floor" id="6-15" wall="active"></td>
+            <td class="table-content floor" id="6-14" ></td>
+            <td class="table-content floor" id="6-15"></td>
             <td class="table-content floor" id="6-16"></td>
             <td class="table-content floor" id="6-17"></td>
             <td class="table-content floor" id="6-18"></td>
-            <td class="table-content floor" id="6-19"></td>
-            <td class="table-content floor" id="6-20"></td>
+            <td class="table-content floor" id="6-19" wall="active"></td>
+            <td class="table-content floor" id="6-20" wall="active"></td>
             <td class="table-content floor" id="6-21"></td>
             <td class="table-content floor" id="6-22"></td>
             <td class="table-content floor" id="6-23"></td>
             <td class="table-content floor" id="6-24"></td>
             <td class="table-content floor" id="6-25"></td>
             <td class="table-content floor" id="6-26"></td>
-            <td class="table-content floor" id="6-27"></td>
-            <td class="table-content floor" id="6-28"></td>
+            <td class="table-content floor" id="6-27" wall="active"></td>
+            <td class="table-content floor" id="6-28" wall="active"></td>
             <td class="table-content floor" id="6-29"></td>
             <td class="table-content floor" id="6-30"></td>
             <td class="table-content floor" id="6-31"></td>
@@ -264,30 +269,30 @@
             <td class="table-content floor" id="7-2"></td>
             <td class="table-content floor" id="7-3"></td>
             <td class="table-content floor" id="7-4"></td>
-            <td class="table-content floor" id="7-5" wall="active"></td>
-            <td class="table-content floor" id="7-6" wall="active"></td>
+            <td class="table-content floor" id="7-5"></td>
+            <td class="table-content floor" id="7-6"></td>
             <td class="table-content floor" id="7-7"></td>
             <td class="table-content floor" id="7-8"></td>
             <td class="table-content floor" id="7-9"></td>
             <td class="table-content floor" id="7-10"></td>
-            <td class="table-content floor" id="7-11"></td>
-            <td class="table-content floor" id="7-12"></td>
+            <td class="table-content floor" id="7-11" wall="active"></td>
+            <td class="table-content floor" id="7-12" wall="active"></td>
             <td class="table-content floor" id="7-13"></td>
-            <td class="table-content floor" id="7-14" wall="active"></td>
-            <td class="table-content floor" id="7-15"  wall="active"></td>
+            <td class="table-content floor" id="7-14"></td>
+            <td class="table-content floor" id="7-15" ></td>
             <td class="table-content floor" id="7-16"></td>
             <td class="table-content floor" id="7-17"></td>
             <td class="table-content floor" id="7-18"></td>
-            <td class="table-content floor" id="7-19"></td>
-            <td class="table-content floor" id="7-20"></td>
+            <td class="table-content floor" id="7-19" wall="active"></td>
+            <td class="table-content floor" id="7-20" wall="active"></td>
             <td class="table-content floor" id="7-21"></td>
             <td class="table-content floor" id="7-22"></td>
             <td class="table-content floor" id="7-23"></td>
             <td class="table-content floor" id="7-24"></td>
             <td class="table-content floor" id="7-25"></td>
             <td class="table-content floor" id="7-26"></td>
-            <td class="table-content floor" id="7-27"></td>
-            <td class="table-content floor" id="7-28"></td>
+            <td class="table-content floor" id="7-27" wall="active"></td>
+            <td class="table-content floor" id="7-28" wall="active"></td>
             <td class="table-content floor" id="7-29"></td>
             <td class="table-content floor" id="7-30"></td>
             <td class="table-content floor" id="7-31"></td>
@@ -305,11 +310,11 @@
             <td class="table-content floor" id="8-8"></td>
             <td class="table-content floor" id="8-9"></td>
             <td class="table-content floor" id="8-10"></td>
-            <td class="table-content floor" id="8-11"></td>
-            <td class="table-content floor" id="8-12"></td>
+            <td class="table-content floor" id="8-11" wall="active"></td>
+            <td class="table-content floor" id="8-12" wall="active"></td>
             <td class="table-content floor" id="8-13" ></td>
-            <td class="table-content floor" id="8-14" wall="active"></td>
-            <td class="table-content floor" id="8-15" wall="active"></td>
+            <td class="table-content floor" id="8-14"></td>
+            <td class="table-content floor" id="8-15"></td>
             <td class="table-content floor" id="8-16"></td>
             <td class="table-content floor" id="8-17"></td>
             <td class="table-content floor" id="8-18"></td>
@@ -317,8 +322,8 @@
             <td class="table-content floor" id="8-20" wall="active"></td>
             <td class="table-content floor" id="8-21"></td>
             <td class="table-content floor" id="8-22"></td>
-            <td class="table-content floor" id="8-23"wall="active"></td>
-            <td class="table-content floor" id="8-24"wall="active"></td>
+            <td class="table-content floor" id="8-23"></td>
+            <td class="table-content floor" id="8-24"></td>
             <td class="table-content floor" id="8-25" ></td>
             <td class="table-content floor" id="8-26" ></td>
             <td class="table-content floor" id="8-27" wall="active"></td>
@@ -339,24 +344,24 @@
             <td class="table-content floor" id="9-8"></td>
             <td class="table-content floor" id="9-9"></td>
             <td class="table-content floor" id="9-10"></td>
-            <td class="table-content floor" id="9-11"></td>
-            <td class="table-content floor" id="9-12"></td>
+            <td class="table-content floor" id="9-11" wall="active"></td>
+            <td class="table-content floor" id="9-12" wall="active"></td>
             <td class="table-content floor" id="9-13" ></td>
-            <td class="table-content floor" id="9-14" wall="active"></td>
-            <td class="table-content floor" id="9-15" wall="active"></td>
+            <td class="table-content floor" id="9-14"></td>
+            <td class="table-content floor" id="9-15"></td>
             <td class="table-content floor" id="9-16"></td>
             <td class="table-content floor" id="9-17"></td>
             <td class="table-content floor" id="9-18"></td>
-            <td class="table-content floor" id="9-19"></td>
-            <td class="table-content floor" id="9-20"></td>
+            <td class="table-content floor" id="9-19" wall="active"></td>
+            <td class="table-content floor" id="9-20" wall="active"></td>
             <td class="table-content floor" id="9-21"></td>
             <td class="table-content floor" id="9-22"></td>
             <td class="table-content floor" id="9-23"></td>
             <td class="table-content floor" id="9-24"></td>
             <td class="table-content floor" id="9-25"></td>
             <td class="table-content floor" id="9-26"></td>
-            <td class="table-content floor" id="9-27"></td>
-            <td class="table-content floor" id="9-28"></td>
+            <td class="table-content floor" id="9-27" wall="active"></td>
+            <td class="table-content floor" id="9-28" wall="active"></td>
             <td class="table-content floor" id="9-29"></td>
             <td class="table-content floor" id="9-30"></td>
             <td class="table-content floor" id="8-31"></td>
@@ -364,34 +369,34 @@
             
         </tr>
         <tr>
-			<td class="table-content floor" id="10-1" wall="active"  ></td>
-            <td class="table-content floor" id="10-2" wall="active" ></td>
-            <td class="table-content floor" id="10-3" wall="active"  ></td>
-            <td class="table-content floor" id="10-4" wall="active"  ></td>
-            <td class="table-content floor" id="10-5" wall="active"  ></td>
-            <td class="table-content floor" id="10-6" wall="active" ></td>
-            <td class="table-content floor" id="10-7" wall="active"></td>
+			<td class="table-content floor" id="10-1" wall="active" ></td>
+            <td class="table-content floor" id="10-2" wall="active"></td>
+            <td class="table-content floor" id="10-3" wall="active" ></td>
+            <td class="table-content floor" id="10-4"  ></td>
+            <td class="table-content floor" id="10-5"  ></td>
+            <td class="table-content floor" id="10-6" ></td>
+            <td class="table-content floor" id="10-7"></td>
             <td class="table-content floor" id="10-8"></td>
             <td class="table-content floor" id="10-9"></td>
             <td class="table-content floor" id="10-10"></td>
-            <td class="table-content floor" id="10-11"></td>
-            <td class="table-content floor" id="10-12"></td>
+            <td class="table-content floor" id="10-11" wall="active"></td>
+            <td class="table-content floor" id="10-12" wall="active"></td>
             <td class="table-content floor" id="10-13" ></td>
-            <td class="table-content floor" id="10-14" wall="active"></td>
-            <td class="table-content floor" id="10-15" wall="active"></td>
+            <td class="table-content floor" id="10-14"></td>
+            <td class="table-content floor" id="10-15"></td>
             <td class="table-content floor" id="10-16"></td>
             <td class="table-content floor" id="10-17"></td>
             <td class="table-content floor" id="10-18"></td>
-            <td class="table-content floor" id="10-19"></td>
-            <td class="table-content floor" id="10-20"></td>
+            <td class="table-content floor" id="10-19" wall="active"></td>
+            <td class="table-content floor" id="10-20" wall="active"></td>
             <td class="table-content floor" id="10-21"></td>
             <td class="table-content floor" id="10-22"></td>
             <td class="table-content floor" id="10-23"></td>
             <td class="table-content floor" id="10-24"></td>
             <td class="table-content floor" id="10-25"></td>
             <td class="table-content floor" id="10-26"></td>
-            <td class="table-content floor" id="10-27"></td>
-            <td class="table-content floor" id="10-28"></td>
+            <td class="table-content floor" id="10-27" wall="active"></td>
+            <td class="table-content floor" id="10-28" wall="active"></td>
             <td class="table-content floor" id="10-29"></td>
             <td class="table-content floor" id="10-30"></td>
             <td class="table-content floor" id="8-31"></td>
@@ -402,31 +407,31 @@
 			<td class="table-content floor" id="11-1" wall="active"></td>
             <td class="table-content floor" id="11-2" wall="active"></td>
             <td class="table-content floor" id="11-3" wall="active"></td>
-            <td class="table-content floor" id="11-4" wall="active"></td>
-            <td class="table-content floor" id="11-5" wall="active"></td>
-            <td class="table-content floor" id="11-6" wall="active"></td>
-            <td class="table-content floor" id="11-7" wall="active"></td>
+            <td class="table-content floor" id="11-4"></td>
+            <td class="table-content floor" id="11-5"></td>
+            <td class="table-content floor" id="11-6"></td>
+            <td class="table-content floor" id="11-7"></td>
             <td class="table-content floor" id="11-8"></td>
             <td class="table-content floor" id="11-9"></td>
             <td class="table-content floor" id="11-10"></td>
-            <td class="table-content floor" id="11-11"></td>
-            <td class="table-content floor" id="11-12"></td>
+            <td class="table-content floor" id="11-11" wall="active"></td>
+            <td class="table-content floor" id="11-12" wall="active"></td>
             <td class="table-content floor" id="11-13"></td>
-            <td class="table-content floor" id="11-14" wall="active"></td>
-            <td class="table-content floor" id="11-15" wall="active"></td>
+            <td class="table-content floor" id="11-14"></td>
+            <td class="table-content floor" id="11-15"></td>
             <td class="table-content floor" id="11-16"></td>
             <td class="table-content floor" id="11-17"></td>
             <td class="table-content floor" id="11-18"></td>
-            <td class="table-content floor" id="11-19"></td>
-            <td class="table-content floor" id="11-20"></td>
+            <td class="table-content floor" id="11-19" wall="active"></td>
+            <td class="table-content floor" id="11-20" wall="active"></td>
             <td class="table-content floor" id="11-21"></td>
             <td class="table-content floor" id="11-22"></td>
             <td class="table-content floor" id="11-23"></td>
             <td class="table-content floor" id="11-24"></td>
             <td class="table-content floor" id="11-25"></td>
             <td class="table-content floor" id="11-26"></td>
-            <td class="table-content floor" id="11-27"></td>
-            <td class="table-content floor" id="11-28"></td>
+            <td class="table-content floor" id="11-27" wall="active"></td>
+            <td class="table-content floor" id="11-28" wall="active"></td>
             <td class="table-content floor" id="11-29"></td>
             <td class="table-content floor" id="11-30"></td>
             <td class="table-content floor" id="11-31"></td>
@@ -435,33 +440,33 @@
         </tr>
         <tr>
 			<td class="table-content floor" id="12-1" wall="active"></td>
-            <td class="table-content floor" id="12-2" wall="active"></td>
-            <td class="table-content floor" id="12-3" wall="active"></td>
-            <td class="table-content floor" id="12-4" wall="active"></td>
-            <td class="table-content floor" id="12-5" wall="active"></td>
-            <td class="table-content floor" id="12-6" wall="active"></td>
-            <td class="table-content floor" id="12-7" wall="active"></td>
+            <td class="table-content floor" id="12-2"wall="active"></td>
+            <td class="table-content floor" id="12-3"wall="active"></td>
+            <td class="table-content floor" id="12-4"></td>
+            <td class="table-content floor" id="12-5"></td>
+            <td class="table-content floor" id="12-6"></td>
+            <td class="table-content floor" id="12-7"></td>
             <td class="table-content floor" id="12-8"></td>
             <td class="table-content floor" id="12-9"></td>
             <td class="table-content floor" id="12-10"></td>
-            <td class="table-content floor" id="12-11"></td>
-            <td class="table-content floor" id="12-12"></td>
+            <td class="table-content floor" id="12-11" wall="active"></td>
+            <td class="table-content floor" id="12-12" wall="active"></td>
             <td class="table-content floor" id="12-13"></td>
-            <td class="table-content floor" id="12-14" wall="active"></td>
-            <td class="table-content floor" id="12-15" wall="active"></td>
+            <td class="table-content floor" id="12-14"></td>
+            <td class="table-content floor" id="12-15"></td>
             <td class="table-content floor" id="12-16"></td>
             <td class="table-content floor" id="12-17"></td>
             <td class="table-content floor" id="12-18"></td>
-            <td class="table-content floor" id="12-19"></td>
-            <td class="table-content floor" id="12-20"></td>
+            <td class="table-content floor" id="12-19" wall="active"></td>
+            <td class="table-content floor" id="12-20" wall="active"></td>
             <td class="table-content floor" id="12-21"></td>
             <td class="table-content floor" id="12-22"></td>
             <td class="table-content floor" id="12-23"></td>
             <td class="table-content floor" id="12-24"></td>
             <td class="table-content floor" id="12-25"></td>
             <td class="table-content floor" id="12-26"></td>
-            <td class="table-content floor" id="12-27"></td>
-            <td class="table-content floor" id="12-28"></td>
+            <td class="table-content floor" id="12-27" wall="active"></td>
+            <td class="table-content floor" id="12-28" wall="active"></td>
             <td class="table-content floor" id="12-29"></td>
             <td class="table-content floor" id="12-30"></td>
             <td class="table-content floor" id="12-31"></td>
@@ -469,9 +474,9 @@
             
         </tr>
         <tr>
-			<td class="table-content floor" id="13-1"></td>
-            <td class="table-content floor" id="13-2" next = "active"></td>
-            <td class="table-content floor" id="13-3" next = "active"></td>
+			<td class="table-content floor" id="13-1" wall="active"></td>
+            <td class="table-content floor" id="13-2" wall="active"></td>
+            <td class="table-content floor" id="13-3" wall="active"></td>
             <td class="table-content floor" id="13-4"></td>
             <td class="table-content floor" id="13-5"></td>
             <td class="table-content floor" id="13-6"></td>
@@ -487,8 +492,8 @@
             <td class="table-content floor" id="13-16"></td>
             <td class="table-content floor" id="13-17"></td>
             <td class="table-content floor" id="13-18"></td>
-            <td class="table-content floor" id="13-19"></td>
-            <td class="table-content floor" id="13-20"></td>
+            <td class="table-content floor" id="13-19" wall="active"></td>
+            <td class="table-content floor" id="13-20" wall="active"></td>
             <td class="table-content floor" id="13-21"></td>
             <td class="table-content floor" id="13-22"></td>
             <td class="table-content floor" id="13-23"></td>
@@ -506,9 +511,9 @@
         
         
         <tr>
-			<td class="table-content floor" id="14-1"></td>
-            <td class="table-content floor" id="14-2" next = "active"></td>
-            <td class="table-content floor" id="14-3" next = "active"></td>
+			<td class="table-content floor" id="14-1" wall="active"></td>
+            <td class="table-content floor" id="14-2" wall="active"></td>
+            <td class="table-content floor" id="14-3" wall="active"></td>
             <td class="table-content floor" id="14-4"></td>
             <td class="table-content floor" id="14-5"></td>
             <td class="table-content floor" id="14-6"></td>
@@ -524,8 +529,8 @@
             <td class="table-content floor" id="14-16"></td>
             <td class="table-content floor" id="14-17"></td>
             <td class="table-content floor" id="14-18"></td>
-            <td class="table-content floor" id="14-19"></td>
-            <td class="table-content floor" id="14-20"></td>
+            <td class="table-content floor" id="14-19" wall="active"></td>
+            <td class="table-content floor" id="14-20" wall="active"></td>
             <td class="table-content floor" id="14-21"></td>
             <td class="table-content floor" id="14-22"></td>
             <td class="table-content floor" id="14-23"></td>
@@ -622,7 +627,7 @@
 
 
 
-<script src="./js/stage1-1/layer1.js"></script>
+<script src="./js/stage1-2/layer1-2.js"></script>
 
 </body>
 </html>
