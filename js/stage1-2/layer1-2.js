@@ -314,6 +314,111 @@ function trataWall () {
 
 
 
+function desTrataWall () {
+
+    let paredes =  document.querySelectorAll('[wall = "active"]');
+ 
+ 
+ 
+    let table = document.querySelector(".table");
+    
+ 
+    //Codigo de verificar parede abaixo
+    for (i=0; i< paredes.length; i ++){
+    let paredes2 = paredes[i].id.split("-");
+     let linha = parseInt(paredes2[0]);
+     let coluna = parseInt(paredes2[1]);
+ 
+       if (linha < 14 && linha > 1){
+     console.log(linha, coluna);
+     table.rows[linha].cells[coluna-1].setAttribute("walld","inactive");
+ 
+     }
+     }
+ 
+ 
+ 
+     //Codigo de verificar parede Acima
+ 
+     for (i=0; i< paredes.length; i ++){
+         let paredes2 = paredes[i].id.split("-");
+          let linha = parseInt(paredes2[0]);
+          let coluna = parseInt(paredes2[1]);
+ 
+         if(linha < 14 && linha > 1){
+ 
+          console.log(linha, coluna);
+          table.rows[linha-2].cells[coluna-1].setAttribute("wallup","inactive");
+         }
+      
+          }
+      
+ 
+ 
+        //Codigo de verificar parede à direita
+          for (i=0; i< paredes.length; i ++){
+             let paredes2 = paredes[i].id.split("-");
+              let linha = parseInt(paredes2[0]);
+              let coluna = parseInt(paredes2[1]);
+     
+             if(coluna < 32 && coluna> 0){
+     
+              console.log(linha, coluna);
+              table.rows[linha-1].cells[coluna].setAttribute("wallr","inactive");
+             }
+          
+              }
+ 
+ 
+              //Codigo de verificar parede à esquerda
+          for (i=0; i< paredes.length; i ++){
+             let paredes2 = paredes[i].id.split("-");
+              let linha = parseInt(paredes2[0]);
+              let coluna = parseInt(paredes2[1]);
+     
+             if(coluna < 32 && coluna > 1){
+     
+              console.log(linha, coluna);
+              table.rows[linha-1].cells[coluna-2].setAttribute("walll","inactive");
+             }
+          
+              }
+ 
+ 
+              let primeiraLinha = 1;
+              let ultimaLinha = 14;
+              let primeiraColuna = 1;
+              let ultimaColuna = 32
+                 
+              for (i = 0; i < table.rows[ultimaLinha-1]; i++){
+ 
+                 table.rows[i].cells[0].setAttribute("walll","inactive");
+ 
+ 
+              }
+ 
+ 
+     //while (paredes.length) {
+     //    paredes[0].setAttribute('[walld = "active"]')
+     //}
+ 
+ 
+ 
+ }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
